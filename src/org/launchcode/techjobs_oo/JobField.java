@@ -20,19 +20,6 @@ public abstract class JobField {
         this.value = value;
     }
 
-//    What getters and setters do ALL of the classes share?
-    public int getId() {
-    return id;
-}
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
 
 //    Which custom methods are identical in ALL of the classes?
     //custom toString and hashCode methods
@@ -53,5 +40,17 @@ public abstract class JobField {
         return Objects.hash(id);
     }
 
+    //    What getters and setters do ALL of the classes share?
+    public int getId() {
+        return id;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
 
 }

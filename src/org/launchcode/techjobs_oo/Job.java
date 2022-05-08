@@ -51,9 +51,32 @@ public class Job {
 
     //5) Code toString to Pass the Tests
 //   @Override
-//    public String toString(){
-//
-//    }
+    public String toString(){
+    //there has got to be a more dry way to do this
+        if (this.getName().isEmpty()) {
+            this.name = "Data not available";
+            }
+            else if (this.getEmployer().getValue().isEmpty()){
+                this.employer.setValue("Data not available");
+            }
+            else if (this.getLocation().getValue().isEmpty()){
+                this.location.setValue("Data not available");
+            }
+            else if (this.getPositionType().getValue().isEmpty()){
+                this.positionType.setValue("Data not available");
+            }
+            else if (this.getCoreCompetency().getValue().isEmpty()){
+                this.coreCompetency.setValue("Data not available");
+            }
+
+        return "\n" + "ID: " + this.getId()
+                + "\n" + "Name: " + this.getName()
+                + "\n" + "Employer: " + this.getEmployer()
+                + "\n" + "Location: " + this.getLocation()
+                + "\n" + "Position Type: " + this.getPositionType()
+                + "\n" + "Core Competency: " + this.getCoreCompetency()
+                + "\n";
+    }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
