@@ -48,4 +48,19 @@ public class JobTest {
         //use .equals
         assertFalse(job4.equals(job5));
     }
+
+    //5) Use TDD to build the test for the toString method first
+    //When passed a Job object, it should return a string that contains a blank line before and after the job information HINT use \n
+
+//    @Test
+//    public void toStringStartsAndEndsWithBlankLine(){
+//        Job job6 = new Job("Java Back End Developer", new Employer("Microsoft"), new Location("San Jose"), new PositionType("Software Engineer"), new CoreCompetency("Java"));
+//        String job6Str = job6.toString();
+//
+//        assertEquals('\n', job6Str.charAt(0));
+//        assertEquals('\n', job6Str.charAt((job6Str.length()-1)));
+//    }
+
+    // each string should contain a label for each field, followed by : then the data stored in the field
+    //if a field is empty, the method should add "Data Not Available" after the label
 }

@@ -49,6 +49,12 @@ public class Job {
         return Objects.hash(getId());
     }
 
+    //5) Code toString to Pass the Tests
+//   @Override
+//    public String toString(){
+//
+//    }
+
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
     // DONE
@@ -96,4 +102,7 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+
+
 }
