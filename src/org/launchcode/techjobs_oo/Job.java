@@ -5,6 +5,7 @@ public class Job {
     private int id;
     private static int nextId = 1;
 
+   //only name is a String all other properties are Classes of their own
     private String name;
     private Employer employer;
     private Location location;
