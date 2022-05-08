@@ -1,5 +1,7 @@
 package org.launchcode.techjobs_oo;
 
+import java.util.Objects;
+
 public class Job {
 
     private int id;
@@ -22,9 +24,9 @@ public class Job {
     }
 
     //2nd constructor takes 5 parameters and assigns values to name, employer, location, positionType, and coreCompetency.
-    public Job(String value, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
+    public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this();
-        this.value = value;
+        this.name = name;
         this.employer = employer;
         this.location = location;
         this.positionType = positionType;
