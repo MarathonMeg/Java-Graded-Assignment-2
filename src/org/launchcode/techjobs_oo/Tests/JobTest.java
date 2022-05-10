@@ -39,8 +39,9 @@ public class JobTest {
 //        assertTrue(job3.getPositionType()instanceof PositionType && job3.getPositionType().getValue().equals("Quality control"));
 //        assertTrue(job3.getCoreCompetency()instanceof CoreCompetency && job3.getCoreCompetency().getValue().equals("Persistence"));
 
-        assertTrue(job3.getName().equals("Product tester"));
-        assertTrue(job3.getEmployer() != null && job3.getEmployer().getValue().equals("ACME"));
+        assertEquals("Product tester", job3.getName());
+        //assertTrue(job3.getEmployer() != null && job3.getEmployer().getValue().equals("ACME"));
+        assertEquals("ACME", job3.getEmployer().getValue());
         assertTrue(job3.getLocation()!= null && job3.getLocation().getValue().equals("Desert"));
         assertTrue(job3.getPositionType()!= null && job3.getPositionType().getValue().equals("Quality control"));
         assertTrue(job3.getCoreCompetency()!= null && job3.getCoreCompetency().getValue().equals("Persistence"));
@@ -60,7 +61,7 @@ public class JobTest {
     //When passed a Job object, it should return a string that contains a blank line before and after the job information HINT use \n
 
     @Test
-    public void toStringStartsAndEndsWithBlankLine(){
+    public void testToStringStartsAndEndsWithNewLine(){
         Job job6 = new Job("Java Back End Developer", new Employer("Microsoft"), new Location("San Jose"), new PositionType("Software Engineer"), new CoreCompetency("Java"));
         String job6Str = job6.toString();
 

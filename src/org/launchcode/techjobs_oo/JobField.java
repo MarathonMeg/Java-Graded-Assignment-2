@@ -10,11 +10,16 @@ public abstract class JobField {
     public String value;
 
 //    Which constructors are the same in ALL FOUR classes?
+    //accepts no arguments and assigns the value of nextId to the id field.
+// It then increments nextId.
+// Thus, every new Employer object will get a different ID number.
     public JobField() {
     id = nextId;
     nextId++;
     }
 
+    //this constructor assigns a value to the value field, and initializes the id for the object
+    //by calling the first constructor with the this(); statement.
     public JobField(String value) {
         this();
         this.value = value;
@@ -22,12 +27,15 @@ public abstract class JobField {
 
 
 //    Which custom methods are identical in ALL of the classes?
-    //custom toString and hashCode methods
+    //custom toString, equals and hashCode methods
+
+   //toString method that just returns the value of object
     @Override
     public String toString() {
     return value;
 }
 
+    //use IntelliJ Generate to generate the equals and hashCode
     @Override
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
         if (this == o) return true;
@@ -40,7 +48,7 @@ public abstract class JobField {
         return Objects.hash(id);
     }
 
-    //    What getters and setters do ALL of the classes share?
+    //   What getters and setters do ALL of the classes share?
     public int getId() {
         return id;
     }

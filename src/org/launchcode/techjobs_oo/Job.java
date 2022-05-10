@@ -54,19 +54,19 @@ public class Job {
     public String toString(){
     //there has got to be a more dry way to do this
         if (this.getName().isEmpty()) {
-            this.name = "Data not available";
+            this.setName("Data not available");
             }
-            else if (this.getEmployer().getValue().isEmpty()){
-                this.employer.setValue("Data not available");
+            else if (employer.getValue().isEmpty()){
+                employer.setValue("Data not available");
             }
-            else if (this.getLocation().getValue().isEmpty()){
-                this.location.setValue("Data not available");
+            else if (location.getValue().isEmpty()){
+               location.setValue("Data not available");
             }
-            else if (this.getPositionType().getValue().isEmpty()){
-                this.positionType.setValue("Data not available");
+            else if (positionType.getValue().isEmpty()){
+                positionType.setValue("Data not available");
             }
-            else if (this.getCoreCompetency().getValue().isEmpty()){
-                this.coreCompetency.setValue("Data not available");
+            else if (coreCompetency.getValue().isEmpty()){
+                coreCompetency.setValue("Data not available");
             }
 
         return "\n" + "ID: " + this.getId()
